@@ -1,0 +1,74 @@
+<%- include("../partials/header") %>
+
+<div class="jumbotron bg-dark text-white">
+    <div class="container">
+        <h1>Git Badge</h1>
+        <p>This website will help you shawag up your README.md file by generating a badge for you.</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
+          Create Badge
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade text-dark" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Create your own Badge</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                <div>
+                    <form action="/createbadge" method="post">
+                        <div class="form-row container">
+                            <!-- <input type="text" name="label" placeholder="label">
+                            <input type="text" name="message" placeholder="message"> -->
+                            <!-- <input type="text" name="color" placeholder="colour"> -->
+                            <div class="form-group col-md-4">
+                              <!-- <label for="inputCity">City</label> -->
+                              <input type="text" class="form-control" name="label" placeholder="label">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <!-- <label for="inputCity">City</label> -->
+                              <input type="text" class="form-control" name="message" placeholder="message">
+                            </div>
+                            <div class="form-group col-md-4"> 
+                            <!-- <label for="inputState">State</label> -->
+                                <select id="inputState" name="color" class="form-control"> 
+                                    <option>Colour</option>
+                                    <option>Green</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Create Badge</button>
+                            </div>
+                        </div>
+                        <!-- <select name="color" class="form-control">
+                            <option>Blue</option>
+                            <option value="green">Green</option>
+                        </select> -->
+                    </form>
+                </div>
+                  
+                  
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<%- include("../partials/footer") %>
